@@ -1,0 +1,14 @@
+This is a code implementing a hexdump utility in C language.
+
+The hexdump utility is a command-line tool that displays the content of a file in hexadecimal format. This is often used for debugging and analyzing binary files.
+
+The program reads a file and outputs its contents in hexadecimal format, as well as in ASCII representation. It also supports some options, such as specifying the number of columns to use and a range of offsets to dump.
+
+Here is a brief summary of what the code does:
+
+Defines some necessary headers, macros, and types.
+Declares some global variables for options and a color map for formatting the output.
+Defines the main function, which reads the command-line arguments and opens the input file.
+Reads the input file in chunks and prints out the content in hexadecimal and ASCII formats.
+Supports some options to customize the output format, such as specifying the number of columns and a range of offsets to dump.
+Closes the input file and exits the program.
