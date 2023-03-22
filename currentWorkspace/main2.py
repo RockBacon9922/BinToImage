@@ -50,8 +50,22 @@ height = int(length / (width * 3))
 image_data = image_data[:width * height * 3]
 
 # Convert the image data to a NumPy array of RGB values
-# Convert the image data to a NumPy array of RGB values
 image_data = image_data.reshape(height, width, 3)
+
+# # using the data turn each byte into a colour
+# pixels = np.zeros((height, width, 3), dtype=np.uint8)
+# # enumerate through each byte in the image data
+# for i, c in enumerate(image_data):
+#     #  read the byte as a colour
+#     # pixels[i] = np.array(
+#     #     [(c >> 16) & 0xff, (c >> 8) & 0xff, c & 0xff], dtype=np.uint8)
+#     # find its closest match in the colour map
+#     mask = np.argmin(np.abs(
+#         image_data - np.array([(c >> 16) & 0xff, (c >> 8) & 0xff, c & 0xff])), axis=2) == 0
+#     pixels[mask] = np.array(
+#         [(c >> 16) & 0xff, (c >> 8) & 0xff, c & 0xff], dtype=np.uint8)
+
+
 pixels = np.zeros((height, width, 3), dtype=np.uint8)
 for i, c in enumerate(colour_map):
     mask = np.argmin(np.abs(
